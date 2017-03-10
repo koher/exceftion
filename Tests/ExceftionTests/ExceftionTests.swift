@@ -23,6 +23,8 @@ class ExceftionTests: XCTestCase {
         } catch let error as FooException {
             XCTAssertEqual(error.message, "foo")
             XCTAssertNil(error.cause)
+            XCTAssertEqual(error.fileName, "ExceftionTests.swift")
+            XCTAssertEqual(error.line, 88)
             let callStack = error.callStack
             XCTAssertTrue(callStack[0].contains("Exception"))
             XCTAssertTrue(callStack[1].contains("FooException"))
@@ -42,6 +44,8 @@ class ExceftionTests: XCTestCase {
             XCTFail()
         } catch let error as QuxException {
             XCTAssertEqual(error.message, "qux")
+            XCTAssertEqual(error.fileName, "ExceftionTests.swift")
+            XCTAssertEqual(error.line, 102)
             let callStack = error.callStack
             XCTAssertTrue(callStack[0].contains("Exception"))
             XCTAssertTrue(callStack[1].contains("QuxException"))
@@ -55,6 +59,8 @@ class ExceftionTests: XCTestCase {
             }
             XCTAssertEqual(cause.message, "foo")
             XCTAssertNil(cause.cause)
+            XCTAssertEqual(cause.fileName, "ExceftionTests.swift")
+            XCTAssertEqual(cause.line, 88)
             let causeCallStack = cause.callStack
             XCTAssertTrue(causeCallStack[0].contains("Exception"))
             XCTAssertTrue(causeCallStack[1].contains("FooException"))
