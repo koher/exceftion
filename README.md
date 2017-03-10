@@ -22,7 +22,7 @@ do {
 ```
 
 ```
-FooException: foo
+FooException: foo (ExceftionTests.swift:88)
     0   Exceftion                           0x00000001001a00de _TFC9Exceftion9ExceptioncfT7messageSS5causeGSqPs5Error___S0_ + 158
     1   ExceftionTests                      0x000000010018762e _TFC14ExceftionTests12FooExceptioncfT7messageSS5causeGSqPs5Error___S0_ + 110
     2   ExceftionTests                      0x00000001001876c3 _TFC14ExceftionTests12FooExceptionCfT7messageSS5causeGSqPs5Error___S0_ + 83
@@ -50,13 +50,13 @@ do {
 ```
 
 ```
-QuxException: qux
+QuxException: qux (ExceftionTests.swift:102)
     0   Exceftion                           0x00000001001a00de _TFC9Exceftion9ExceptioncfT7messageSS5causeGSqPs5Error___S0_ + 158
     1   ExceftionTests                      0x00000001001878be _TFC14ExceftionTests12QuxExceptioncfT7messageSS5causeGSqPs5Error___S0_ + 110
     2   ExceftionTests                      0x0000000100187953 _TFC14ExceftionTests12QuxExceptionCfT7messageSS5causeGSqPs5Error___S0_ + 83
     3   ExceftionTests                      0x0000000100181ca1 _TF14ExceftionTests3quxFzT_T_ + 177
     ...
-Caused by FooException: foo
+Cause by FooException: foo (ExceftionTests.swift:88)
     0   Exceftion                           0x00000001001a00de _TFC9Exceftion9ExceptioncfT7messageSS5causeGSqPs5Error___S0_ + 158
     1   ExceftionTests                      0x000000010018762e _TFC14ExceftionTests12FooExceptioncfT7messageSS5causeGSqPs5Error___S0_ + 110
     2   ExceftionTests                      0x00000001001876c3 _TFC14ExceftionTests12FooExceptionCfT7messageSS5causeGSqPs5Error___S0_ + 83
